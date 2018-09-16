@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="net.dtdns.tqlap089.wirelesscarcontroller.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="@color/colorPrimary">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <WebView
+            android:id="@+id/camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" />
+
+
+        <ToggleButton
+            android:id="@+id/toggleLed"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_above="@+id/cameraMotion"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/light_toggle_selector"
+            android:textOff=""
+            android:textOn="" />
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/speedController"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/carMotion"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/speedUp"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:background="@drawable/plus_selector" />
+
+            <TextView
+                android:id="@+id/speedMotor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <ImageButton
+                android:id="@+id/speedDown"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_gravity="center|bottom"
+                android:background="@drawable/minus_selector" />
+
+        </LinearLayout>
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/carMotion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imageUp"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:background="@drawable/move_up_selector"
+                android:clickable="true" />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageLeft"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/move_left_selector" />
+
+
+                <ImageButton
+                    android:id="@+id/imageRight"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/move_right_selector" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/imageDown"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_gravity="center|bottom"
+                android:background="@drawable/move_down_selector" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/cameraMotion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+
+            <ImageButton
+                android:id="@+id/cameraUp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/camera_up_selector" />
+
+            <ImageButton
+                android:id="@+id/cameraDown"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center|bottom"
+                android:background="@drawable/camera_down_selector" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

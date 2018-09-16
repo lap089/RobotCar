@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Wireless Car Controller</string>
+    <string name="main_activity_name">Main Controller</string>
+    <string name="action_reload">Refresh Camera</string>
+</resources>
